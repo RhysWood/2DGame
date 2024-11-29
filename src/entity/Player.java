@@ -7,6 +7,7 @@ import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
+import java.io.PrintStream;
 import java.util.Objects;
 
 public class Player extends Entity {
@@ -54,7 +55,7 @@ public class Player extends Entity {
         }
     }
     public void update(){
-        if(keyH.downPressed == true || keyH.upPressed == true || keyH.leftPressed == true || keyH.rightPressed == true){
+        if(keyH.downPressed || keyH.upPressed || keyH.leftPressed || keyH.rightPressed){
             if(keyH.upPressed) {
                 direction = "up";
             }
